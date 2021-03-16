@@ -1,0 +1,13 @@
+<mule xmlns="http://www.mulesoft.org/schema/mule/core"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:pubsubplus-container="http://www.mulesoft.org/schema/mule/pubsubplus-container"
+      xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+          http://www.mulesoft.org/schema/mule/pubsubplus-container http://www.mulesoft.org/schema/mule/pubsubplus-container/current/mule-pubsubplus-container.xsd">
+
+    <pubsubplus-container:config name="config"/>
+
+    <object name="testObject" class="com.solace.connector.mulesoft.test.TestObject">
+        <property key="valueFromProperty" value="${pubsubplus-container::port}" />
+    </object>
+
+</mule>

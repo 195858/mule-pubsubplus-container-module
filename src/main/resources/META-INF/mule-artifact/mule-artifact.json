@@ -1,0 +1,26 @@
+{
+  "minMuleVersion": "4.1.0",
+  "requiredProduct": "MULE",
+  "extensionModelLoaderDescriptor": {
+    "id": "crafted",
+    "attributes": {
+      "type": "com.solace.connector.mulesoft.testcontainer.SolaceContainerConfigurationPropertiesExtensionLoadingDelegate"
+    }
+  },
+  "name": "pubsubplus-container",
+  "classLoaderModelLoaderDescriptor": {
+    "id": "mule",
+    "attributes": {
+      "exportedPackages": [
+        "com.solace.connector.mulesoft.testcontainer"
+      ],
+      "exportedResources": [
+        "META-INF/services/org.mule.runtime.config.api.dsl.model.properties.ConfigurationPropertiesProviderFactory"
+      ]
+    }
+  },
+  "bundleDescriptorLoader": {
+    "id": "mule",
+    "attributes": {}
+  }
+}
